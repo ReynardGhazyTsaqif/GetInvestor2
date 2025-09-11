@@ -10,6 +10,12 @@ import AboutPage from "./pages/AboutPage";
 import DailyPage from "./pages/DailyPage";
 import ChatbotPage from "./pages/ChatbotPage";
 import Reward from "./pages/Reward";
+import RewardDetail from "./pages/DetailReward";
+import ChangeReward from "./pages/ChangeReward";
+import Donasi from "./pages/Donasi";
+import Voucher from "./pages/Voucher";
+import Undian from "./pages/Undian";
+import TukarUang from "./pages/TukarUang";
 
 export default function App() {
   return (
@@ -57,6 +63,54 @@ export default function App() {
           element={
             <ProtectedRoute>
               <Reward />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/rewarddetail"
+          element={
+            <ProtectedRoute>
+              <RewardDetail />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/changereward"
+          element={
+            <ProtectedRoute>
+              <ChangeReward />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/tukaruang"
+          element={
+            <ProtectedRoute>
+              <TukarUang />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/undian"
+          element={
+            <ProtectedRoute>
+              <Undian />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/voucher"
+          element={
+            <ProtectedRoute>
+              <Voucher />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/donasi"
+          element={
+            <ProtectedRoute>
+              <Donasi />
             </ProtectedRoute>
           }
         />
