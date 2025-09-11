@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import DailyPage from "./pages/DailyPage";
 import ChatbotPage from "./pages/ChatbotPage";
+import Reward from "./pages/Reward";
 
 export default function App() {
   return (
@@ -55,7 +56,7 @@ export default function App() {
           path="/rewards"
           element={
             <ProtectedRoute>
-              <div className="p-6">Rewards Page</div>
+              <Reward />
             </ProtectedRoute>
           }
         />
