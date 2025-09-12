@@ -6,7 +6,7 @@ export default function Reward() {
   return (
     <LayoutWhite>
       {/* Header */}
-      <div className="mb-6">
+      <div data-aos="fade-up" className="mb-6">
         {/* Judul + Gift */}
         <div className="flex items-center gap-3 mb-2 ">
           <h1 className="text-3xl lg:text-5xl font-bold text-[#795548] leading-snug flex items-center ">
@@ -22,8 +22,10 @@ export default function Reward() {
         </p>
       </div>
 
+
+
       {/* Ringkasan Point */}
-      <div className="flex my-12 rounded-2xl overflow-hidden shadow bg-[#FFF8E1]">
+      <div data-aos="fade-up" className="flex mb-6 rounded-2xl overflow-hidden shadow bg-[#FFF8E1]">
         {/* Bagian Kiri */}
         <div className="w-1/2 bg-[#8D6E6326] p-6 rounded-r-2xl text-[#795548]">
           <h2 className="text-xl lg:text-2xl font-bold">Ringkasan Point</h2>
@@ -53,8 +55,8 @@ export default function Reward() {
       </div>
 
       {/* Filter Tabs */}
-      <div className="flex gap-4 mb-6">
-        <button className="flex-1 bg-[#FB8C00] text-white px-4 py-2 rounded-full">
+      <div data-aos="fade-up" className="flex gap-3 mb-6">
+        <button className="bg-orange-400 text-white px-4 py-2 rounded-lg">
           Semua
         </button>
         <button className="flex-1 bg-[#8D6E63] text-white px-4 py-2 rounded-full">
@@ -72,7 +74,7 @@ export default function Reward() {
       </div>
 
       {/* Bawah Katalog */}
-      <div className="bg-[#FFF8E1] rounded-lg">
+      <div data-aos="fade-up" className="bg-[#FFF8E1] rounded-lg">
         <div className="p-6">
           <h2 className="text-xl text-[#558B2F] font-semibold  mb-4">
             Katalog Reward:
@@ -99,7 +101,7 @@ export default function Reward() {
         </div>
 
         {/* Rekomendasi Reward */}
-        <div className="px-6 pb-6">
+        <div data-aos="fade-up" className="px-6 pb-6">
           <h2 className="text-xl text-[#558B2F] font-semibold  mb-4">
             Rekomendasi Reward:
           </h2>
@@ -116,7 +118,6 @@ export default function Reward() {
           </div>
         </div>
       </div>
-      {/* Katalog Reward */}
     </LayoutWhite>
   );
 }
