@@ -21,6 +21,7 @@ import SearchSampah from "./pages/Search";
 import Scan from "./pages/Scan";
 import Map from "./pages/Map";
 import Profile from "./pages/Profil";
+import HistoryPage from "./pages/HistoryPage";
 
 export default function App() {
   return (
@@ -155,7 +156,7 @@ export default function App() {
           path="/history"
           element={
             <ProtectedRoute>
-              <div className="p-6">History Page</div>
+              <HistoryPage />
             </ProtectedRoute>
           }
         />
