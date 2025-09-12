@@ -34,7 +34,11 @@ export default function RegisterPage() {
     }
 
     if (password !== confirmPassword) {
-      Swal.fire("Oops!", "Password dan konfirmasi password tidak sama", "error");
+      Swal.fire(
+        "Oops!",
+        "Password dan konfirmasi password tidak sama",
+        "error"
+      );
       return;
     }
 
@@ -62,6 +66,7 @@ export default function RegisterPage() {
 
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {
+      console.error("Register error:", err);
       Swal.fire("Error", "Terjadi kesalahan server", "error");
     }
   };
@@ -74,12 +79,17 @@ export default function RegisterPage() {
       <div className="w-full max-w-md bg-[#F1EBE4] rounded-2xl shadow-md p-8">
         {/* Logo */}
         <div className="flex flex-col items-center mb-6">
-          <img src="/Logo.svg" alt="EcoReward Logo" className="w-12 h-12 mb-2" />
+          <img
+            src="/Logo.svg"
+            alt="EcoReward Logo"
+            className="w-12 h-12 mb-2"
+          />
           <h1 className="text-2xl font-semibold text-green-700">EcoReward</h1>
         </div>
 
         <h2 className="text-center text-gray-700 mb-6 font-medium">Daftar</h2>
 
+        {/* Form */}
         <form className="space-y-4" onSubmit={handleSubmit}>
           {/* Nama */}
           <div className="flex items-center border border-gray-300 rounded-lg px-3">

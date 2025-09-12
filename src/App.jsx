@@ -37,7 +37,6 @@ export default function App() {
   useEffect(() => {
     AOS.refresh();
   }, [location.pathname]);
-
   return (
     <AuthProvider>
       <Routes>
@@ -46,14 +45,6 @@ export default function App() {
         <Route path="/register" element={<RegisterPage />} />
 
         {/* Protected */}
-        <Route
-          path="/profile"
-          element={
-            // <ProtectedRoute>
-            <Profile />
-            // </ProtectedRoute>
-          }
-        />
         <Route
           path="/"
           element={
@@ -91,6 +82,54 @@ export default function App() {
           element={
             <ProtectedRoute>
               <Reward />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/rewarddetail"
+          element={
+            <ProtectedRoute>
+              <RewardDetail />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/changereward"
+          element={
+            <ProtectedRoute>
+              <ChangeReward />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/tukaruang"
+          element={
+            <ProtectedRoute>
+              <TukarUang />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/undian"
+          element={
+            <ProtectedRoute>
+              <Undian />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/voucher"
+          element={
+            <ProtectedRoute>
+              <Voucher />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/donasi"
+          element={
+            <ProtectedRoute>
+              <Donasi />
             </ProtectedRoute>
           }
         />

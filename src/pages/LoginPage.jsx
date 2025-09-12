@@ -12,7 +12,7 @@ export default function LoginPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    // nanti tambahin API call ke backend
     try {
       const res = await fetch("http://localhost:3000/api/auth/login", {
         method: "POST",
@@ -45,6 +45,7 @@ export default function LoginPage() {
       });
 
     } catch (err) {
+      console.error("Login error:", err);
       Swal.fire({
         icon: "error",
         title: "Terjadi Kesalahan",
@@ -105,7 +106,7 @@ export default function LoginPage() {
               <input type="checkbox" className="form-checkbox text-green-600" />
               <span>Remember Me</span>
             </label>
-            <a href="#" className="text-orange-500 hover:underline">Forgot Password?</a>
+            <Link to="/" className="text-orange-500 hover:underline">Forgot Password?</Link>
           </div>
 
           <button type="submit" className="w-full bg-green-700 hover:bg-green-800 text-white py-2 rounded-full font-semibold transition">
