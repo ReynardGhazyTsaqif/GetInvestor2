@@ -74,7 +74,7 @@ export default function Reward() {
       </div>
 
       {/* Bawah Katalog */}
-      <div className="bg-[#FFF8E1] rounded-lg">
+      <div data-aos="fade-up" className="bg-[#FFF8E1] rounded-lg">
         <div className="p-6">
           <h2 className="text-xl text-[#558B2F] font-semibold  mb-4">
             Katalog Reward:
@@ -101,7 +101,7 @@ export default function Reward() {
         </div>
 
         {/* Rekomendasi Reward */}
-        <div className="px-6 pb-6">
+        <div data-aos="fade-up" className="px-6 pb-6">
           <h2 className="text-xl text-[#558B2F] font-semibold  mb-4">
             Rekomendasi Reward:
           </h2>
@@ -117,34 +117,6 @@ export default function Reward() {
             ))}
           </div>
         </div>
-      </div>
-      {/* Katalog Reward */}
-      <h2 data-aos="fade-up" className="text-lg font-semibold mb-3">Katalog Reward:</h2>
-      <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
-        {[1, 2, 3, 4].map((item) => (
-          <div
-            key={item}
-            className="bg-white shadow-md rounded-xl p-4 flex flex-col items-center justify-center"
-          >
-            <div className="w-16 h-16 rounded-full bg-gray-200 mb-3"></div>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded-md text-sm font-semibold">
-              Tukar
-            </button>
-          </div>
-        ))}
-      </div>
-
-      {/* Rekomendasi Reward */}
-      <h2 data-aos="fade-up" className="text-lg font-semibold mb-3">Rekomendasi Reward:</h2>
-      <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {[1, 2, 3].map((item) => (
-          <div
-            key={item}
-            className="bg-[#FFF9F0] shadow-md rounded-xl p-4 flex flex-col items-center justify-center"
-          >
-            <div className="w-16 h-16 rounded-full bg-gray-200 mb-3"></div>
-          </div>
-        ))}
       </div>
     </LayoutWhite>
   );
