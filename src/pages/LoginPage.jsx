@@ -15,7 +15,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#F8F7F4] px-4">
+    <div data-aos="fade-up" className="min-h-screen flex items-center justify-center bg-[#F8F7F4] px-4">
       <div className="w-full max-w-md bg-[#F1EBE4] rounded-2xl shadow-md p-8">
         {/* Logo */}
         <div className="flex flex-col items-center mb-6">

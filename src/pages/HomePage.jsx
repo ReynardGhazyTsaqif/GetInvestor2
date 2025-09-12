@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <div className="flex flex-col lg:flex-row items-center justify-between mt-8 p-6 lg:p-8">
+      <div data-aos="fade-up" className="flex flex-col lg:flex-row items-center justify-between mt-8 p-6 lg:p-8">
         {/* Text */}
         <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left px-4">
           <h1 className="text-3xl lg:text-5xl font-bold text-[#795548] mb-4 leading-snug">
@@ -26,7 +26,7 @@ export default function HomePage() {
       </div>
 
       {/* Services Section */}
-      <div className="mt-8 bg-[#E0E6D8] rounded-2xl p-6 lg:p-8 shadow-sm">
+      <div data-aos="fade-up" className="mt-8 bg-[#E0E6D8] rounded-2xl p-6 lg:p-8 shadow-sm">
         {/* Title */}
         <h2 className="text-xl lg:text-2xl font-semibold text-green-700 mb-6">
           Layanan yang ditawarkan
@@ -65,7 +65,7 @@ export default function HomePage() {
       </div>
 
       {/* Floating Chat */}
-      <div className="fixed bottom-6 right-6">
+      <div data-aos="fade-up" className="fixed bottom-6 right-6">
         <Link to="/chatbot" className="w-14 h-14 bg-[#388E3C] rounded-full shadow-lg hover:scale-110 transition flex items-center justify-center">
           <MessageCircle className="w-6 h-6 text-white" />
         </Link>

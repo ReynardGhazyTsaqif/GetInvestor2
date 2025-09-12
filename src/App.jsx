@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./routes/ProtectedRoute";
 
@@ -9,9 +10,23 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import DailyPage from "./pages/DailyPage";
 import ChatbotPage from "./pages/ChatbotPage";
+import HistoryPage from "./pages/HistoryPage"
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Reward from "./pages/Reward";
 
 export default function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+  }, []);
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [location.pathname]);
+
   return (
     <AuthProvider>
       <Routes>
@@ -53,6 +68,14 @@ export default function App() {
           }
         />
         <Route
+          path="/history"
+          element={
+            <ProtectedRoute>
+              <HistoryPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
           path="/rewards"
           element={
             <ProtectedRoute>
@@ -68,14 +91,7 @@ export default function App() {
             </ProtectedRoute>
           }
         />
-        <Route
-          path="/history"
-          element={
-            <ProtectedRoute>
-              <div className="p-6">History Page</div>
-            </ProtectedRoute>
-          }
-        />
+
         <Route
           path="/belanja"
           element={

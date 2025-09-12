@@ -7,7 +7,7 @@ export default function AboutUsPage() {
   return (
     <Layout>
       {/* Section Kenal Lebih Dekat */}
-      <div className="flex flex-col lg:flex-row items-center justify-between mt-16">
+      <div data-aos="fade-up" className="flex flex-col lg:flex-row items-center justify-between mt-16">
         {/* Teks */}
         <div className="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left px-6">
           <h2 className="text-3xl lg:text-4xl font-bold text-green-700 mb-6 leading-snug">
@@ -27,7 +27,7 @@ export default function AboutUsPage() {
       </div>
 
       {/* Visi & Misi */}
-      <div className="mt-16 bg-[#E0E6D8] rounded-2xl p-8 shadow-sm">
+      <div data-aos="fade-up" className="mt-16 bg-[#E0E6D8] rounded-2xl p-8 shadow-sm">
         {/* Judul */}
         <div className="inline-block bg-green-700 text-white px-4 py-1 rounded-full text-sm font-semibold mb-6">
           Visi & Misi
