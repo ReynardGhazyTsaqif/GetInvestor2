@@ -50,143 +50,143 @@ export default function App() {
           element={
             // <ProtectedRoute>
               <Profile />
-            // </ProtectedRoute>
+            /* </ProtectedRoute> */
           }
         />
         <Route
           path="/"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <HomePage />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/about"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <AboutPage />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/daily"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <DailyPage />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/chatbot"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <ChatbotPage />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/history"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <HistoryPage />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/rewards"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <Reward />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/rewarddetail"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <RewardDetail />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/changereward"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <ChangeReward />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/tukaruang"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <TukarUang />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/undian"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <Undian />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/voucher"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <Voucher />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/donasi"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <Donasi />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/search"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <SearchSampah />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/scan"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <Scan />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/map"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <Map />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/history"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <HistoryPage />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/belanja"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <Belanja />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
       </Routes>
