@@ -10,7 +10,7 @@ export default function ChatbotPage() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-green-50 to-white">
+    <div data-aos="fade-up" className="flex flex-col min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Header */}
       <header className="flex items-center justify-between px-4 py-3 bg-white shadow-md rounded-b-2xl">
         <div onClick={handleBack} className="flex items-center space-x-2">

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./routes/ProtectedRoute";
 
@@ -11,7 +12,20 @@ import DailyPage from "./pages/DailyPage";
 import ChatbotPage from "./pages/ChatbotPage";
 import HistoryPage from "./pages/HistoryPage"
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+  }, []);
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [location.pathname]);
+
   return (
     <AuthProvider>
       <Routes>

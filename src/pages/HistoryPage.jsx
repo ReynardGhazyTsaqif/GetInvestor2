@@ -33,7 +33,7 @@ export default function HistoryPage() {
   return (
     <Layout>
 
-      <div className="min-h-screen bg-[#FFF6E0] flex justify-center py-10 px-4">
+      <div data-aos="fade-up" className="min-h-screen flex justify-center py-10 px-4">
         <div className="w-full max-w-2xl bg-white shadow-lg rounded-xl p-6">
           <h1 className="text-center text-2xl font-bold text-brown-700 mb-6">
             History
