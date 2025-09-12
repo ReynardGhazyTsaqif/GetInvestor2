@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import DailyPage from "./pages/DailyPage";
 import ChatbotPage from "./pages/ChatbotPage";
+import HistoryPage from "./pages/HistoryPage"
 
 export default function App() {
   return (
@@ -48,6 +49,14 @@ export default function App() {
           element={
             <ProtectedRoute>
               <ChatbotPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/history"
+          element={
+            <ProtectedRoute>
+              <HistoryPage />
             </ProtectedRoute>
           }
         />
