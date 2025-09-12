@@ -4,6 +4,9 @@ import { useLocation } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./routes/ProtectedRoute";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import HomePage from "./pages/HomePage";
@@ -11,10 +14,18 @@ import AboutPage from "./pages/AboutPage";
 import DailyPage from "./pages/DailyPage";
 import ChatbotPage from "./pages/ChatbotPage";
 import Reward from "./pages/Reward";
-import HistoryPage from "./pages/HistoryPage"
-
-import AOS from "aos";
-import "aos/dist/aos.css";
+import RewardDetail from "./pages/DetailReward";
+import ChangeReward from "./pages/ChangeReward";
+import Donasi from "./pages/Donasi";
+import Voucher from "./pages/Voucher";
+import Undian from "./pages/Undian";
+import TukarUang from "./pages/TukarUang";
+import Belanja from "./pages/Belanja";
+import SearchSampah from "./pages/Search";
+import Scan from "./pages/Scan";
+import Map from "./pages/Map";
+import Profile from "./pages/Profil";
+import HistoryPage from "./pages/HistoryPage";
 
 export default function App() {
   const location = useLocation();
@@ -26,7 +37,6 @@ export default function App() {
   useEffect(() => {
     AOS.refresh();
   }, [location.pathname]);
-
   return (
     <AuthProvider>
       <Routes>
@@ -35,6 +45,14 @@ export default function App() {
         <Route path="/register" element={<RegisterPage />} />
 
         {/* Protected */}
+        <Route
+          path="/profile"
+          element={
+            // <ProtectedRoute>
+              <Profile />
+            // </ProtectedRoute>
+          }
+        />
         <Route
           path="/"
           element={
@@ -84,10 +102,74 @@ export default function App() {
           }
         />
         <Route
+          path="/rewarddetail"
+          element={
+            <ProtectedRoute>
+              <RewardDetail />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/changereward"
+          element={
+            <ProtectedRoute>
+              <ChangeReward />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/tukaruang"
+          element={
+            <ProtectedRoute>
+              <TukarUang />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/undian"
+          element={
+            <ProtectedRoute>
+              <Undian />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/voucher"
+          element={
+            <ProtectedRoute>
+              <Voucher />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/donasi"
+          element={
+            <ProtectedRoute>
+              <Donasi />
+            </ProtectedRoute>
+          }
+        />
+        <Route
           path="/search"
           element={
             <ProtectedRoute>
-              <div className="p-6">Search Page</div>
+              <SearchSampah />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/scan"
+          element={
+            <ProtectedRoute>
+              <Scan />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/map"
+          element={
+            <ProtectedRoute>
+              <Map />
             </ProtectedRoute>
           }
         />
@@ -95,7 +177,7 @@ export default function App() {
           path="/history"
           element={
             <ProtectedRoute>
-              <div className="p-6">History Page</div>
+              <HistoryPage />
             </ProtectedRoute>
           }
         />
@@ -103,7 +185,7 @@ export default function App() {
           path="/belanja"
           element={
             <ProtectedRoute>
-              <div className="p-6">Belanja Page</div>
+              <Belanja />
             </ProtectedRoute>
           }
         />

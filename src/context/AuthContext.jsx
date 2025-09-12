@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
+
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [token, setToken] = useState(null);
@@ -15,7 +16,6 @@ export function AuthProvider({ children }) {
     }
   }, []);
 
-  // login -> simpan token
   const login = (newToken) => {
     setToken(newToken);
     setIsAuthenticated(true);

@@ -10,6 +10,7 @@ export default function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+
   const dropdownRef = useRef(null);
 
   const navLinks = [
@@ -30,7 +31,6 @@ export default function Navbar() {
   // tutup dropdown ketika klik di luar
   useEffect(() => {
     function handleClickOutside(event) {
-      // pastikan dropdownRef.current adalah element dan event.target ada
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setProfileOpen(false);
       }
