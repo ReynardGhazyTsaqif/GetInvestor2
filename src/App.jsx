@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./routes/ProtectedRoute";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
@@ -24,6 +28,15 @@ import Profile from "./pages/Profil";
 import HistoryPage from "./pages/HistoryPage";
 
 export default function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+  }, []);
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [location.pathname]);
   return (
     <AuthProvider>
       <Routes>
@@ -35,9 +48,9 @@ export default function App() {
         <Route
           path="/profile"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <Profile />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route
@@ -132,7 +145,7 @@ export default function App() {
           path="/search"
           element={
             <ProtectedRoute>
-              <SearchSampah/>
+              <SearchSampah />
             </ProtectedRoute>
           }
         />
@@ -140,7 +153,7 @@ export default function App() {
           path="/scan"
           element={
             <ProtectedRoute>
-              <Scan/>
+              <Scan />
             </ProtectedRoute>
           }
         />
@@ -148,7 +161,7 @@ export default function App() {
           path="/map"
           element={
             <ProtectedRoute>
-              <Map/>
+              <Map />
             </ProtectedRoute>
           }
         />
@@ -164,7 +177,7 @@ export default function App() {
           path="/belanja"
           element={
             <ProtectedRoute>
-              <Belanja/>
+              <Belanja />
             </ProtectedRoute>
           }
         />

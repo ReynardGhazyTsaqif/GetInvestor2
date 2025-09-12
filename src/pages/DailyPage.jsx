@@ -6,7 +6,7 @@ import DailyImage from "../assets/daily.png";
 export default function DailyPage() {
   return (
     <Layout>
-      <div className="min-h-screen px-4 md:px-12 py-6">
+      <div data-aos="fade-up" className="min-h-screen px-4 md:px-12 py-6">
         {/* Hero Section */}
         <section className="flex flex-col md:flex-row items-center justify-between mb-10">
           {/* Text */}
