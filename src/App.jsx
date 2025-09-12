@@ -16,6 +16,11 @@ import Donasi from "./pages/Donasi";
 import Voucher from "./pages/Voucher";
 import Undian from "./pages/Undian";
 import TukarUang from "./pages/TukarUang";
+import Belanja from "./pages/Belanja";
+import SearchSampah from "./pages/Search";
+import Scan from "./pages/Scan";
+import Map from "./pages/Map";
+import Profile from "./pages/Profil";
 
 export default function App() {
   return (
@@ -26,6 +31,14 @@ export default function App() {
         <Route path="/register" element={<RegisterPage />} />
 
         {/* Protected */}
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/"
           element={
@@ -118,7 +131,23 @@ export default function App() {
           path="/search"
           element={
             <ProtectedRoute>
-              <div className="p-6">Search Page</div>
+              <SearchSampah/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/scan"
+          element={
+            <ProtectedRoute>
+              <Scan/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/map"
+          element={
+            <ProtectedRoute>
+              <Map/>
             </ProtectedRoute>
           }
         />
@@ -134,7 +163,7 @@ export default function App() {
           path="/belanja"
           element={
             <ProtectedRoute>
-              <div className="p-6">Belanja Page</div>
+              <Belanja/>
             </ProtectedRoute>
           }
         />
