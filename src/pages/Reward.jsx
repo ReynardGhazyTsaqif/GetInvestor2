@@ -6,11 +6,7 @@ export default function Reward() {
   return (
     <LayoutWhite>
       {/* Header */}
-<<<<<<< HEAD
       <div data-aos="fade-up" className="mb-6">
-=======
-      <div className="mb-6">
->>>>>>> 73cac7b52ffdf9a9e8df99a32bec46fed6bea90f
         {/* Judul + Gift */}
         <div className="flex items-center gap-3 mb-2 ">
           <h1 className="text-3xl lg:text-5xl font-bold text-[#795548] leading-snug flex items-center ">
@@ -19,7 +15,6 @@ export default function Reward() {
           {/* Icon gift */}
           <Gift className="text-black w-8 h-8 lg:w-12 lg:h-12 font-bold" />
         </div>
-<<<<<<< HEAD
 
         {/* Deskripsi */}
         <p className="text-sm lg:text-base text-[#795548]">
@@ -31,17 +26,6 @@ export default function Reward() {
 
       {/* Ringkasan Point */}
       <div data-aos="fade-up" className="flex mb-6 rounded-2xl overflow-hidden shadow bg-[#FFF8E1]">
-=======
-
-        {/* Deskripsi */}
-        <p className="text-sm lg:text-base text-[#795548]">
-          Tukar point hasil pedulimu dengan berbagai produk ramah lingkungan
-        </p>
-      </div>
-
-      {/* Ringkasan Point */}
-      <div className="flex my-12 rounded-2xl overflow-hidden shadow bg-[#FFF8E1]">
->>>>>>> 73cac7b52ffdf9a9e8df99a32bec46fed6bea90f
         {/* Bagian Kiri */}
         <div className="w-1/2 bg-[#8D6E6326] p-6 rounded-r-2xl text-[#795548]">
           <h2 className="text-xl lg:text-2xl font-bold">Ringkasan Point</h2>
@@ -71,13 +55,8 @@ export default function Reward() {
       </div>
 
       {/* Filter Tabs */}
-<<<<<<< HEAD
       <div data-aos="fade-up" className="flex gap-3 mb-6">
         <button className="bg-orange-400 text-white px-4 py-2 rounded-lg">
-=======
-      <div className="flex gap-4 mb-6">
-        <button className="flex-1 bg-[#FB8C00] text-white px-4 py-2 rounded-full">
->>>>>>> 73cac7b52ffdf9a9e8df99a32bec46fed6bea90f
           Semua
         </button>
         <button className="flex-1 bg-[#8D6E63] text-white px-4 py-2 rounded-full">
@@ -140,7 +119,6 @@ export default function Reward() {
         </div>
       </div>
       {/* Katalog Reward */}
-<<<<<<< HEAD
       <h2 data-aos="fade-up" className="text-lg font-semibold mb-3">Katalog Reward:</h2>
       <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
         {[1, 2, 3, 4].map((item) => (
@@ -168,8 +146,6 @@ export default function Reward() {
           </div>
         ))}
       </div>
-=======
->>>>>>> 73cac7b52ffdf9a9e8df99a32bec46fed6bea90f
     </LayoutWhite>
   );
 }
