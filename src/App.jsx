@@ -31,7 +31,7 @@ export default function App() {
   const location = useLocation();
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   useEffect(() => {
